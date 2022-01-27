@@ -1,3 +1,5 @@
+Enunciado dos exercícios propostos 3.1
+
 Exerício 1
 
 1 - Crie uma lista das pessoas que você já fez amizade na Trybe.
