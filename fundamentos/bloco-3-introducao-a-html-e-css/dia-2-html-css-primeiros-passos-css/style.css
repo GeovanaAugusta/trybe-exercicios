@@ -30,17 +30,4 @@ background-color: brown;
 line-height: 6mm;
 }
 
-  </style>
-  </head>
-  <body>
-    <h1>Exercícios 3.2 - Exercício 3</h1>
-
-    <p>Qual é a sua cor favorita?</p>
-
-    <ul id="lista">
-      <li id="amarelo">Amarelo</li>
-      <li id="vermelho">Vermelho</li>
-      <li id="marrom">Marrom</li>
-    </ul>
-  </body>
-</html>
+  
