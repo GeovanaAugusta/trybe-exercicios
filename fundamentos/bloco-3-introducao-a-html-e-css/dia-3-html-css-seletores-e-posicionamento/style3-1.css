@@ -1,0 +1,18 @@
+h1, p {
+text-align: center;
+}
+
+ol.lista li:hover {
+    background-color: blue;
+}
+
+ol.lista li:active {
+   font-family: 'Courier New', Courier, monospace;
+  
+}
+
+div {
+    list-style: none;
+}
+
+
