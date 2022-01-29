@@ -1,0 +1,45 @@
+ol li:nth-child(odd){
+    background-color: yellow;
+    text-transform: uppercase;
+}
+
+ol li:nth-child(even) {
+    background-color: green;
+}
+
+h1, h3 {
+    color: red;
+}
+
+h1 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+.lista2 li:nth-child(1), .lista2  li:nth-child(2), .lista2 li:nth-child(3) {
+    color: blue;
+   }
+
+   /*Falta terminar: colocar backgroud pink para java no texto */
+
+ .lista2 JavaScript {
+    background-color: pink;
+  }
+
+  /*Falta fonte temática */
+
+  .lista3 li:hover  {
+   font-weight: bold;
+   }
+
+
+
+
