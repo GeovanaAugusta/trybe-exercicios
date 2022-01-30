@@ -1,0 +1,65 @@
+/* Tentativa de trazer o título h1, por margens, para mais centralizado em relação ao pódio */
+
+h1 {
+  position: relative;
+margin-left: 205px;
+  }
+
+ /* Transformação dos elementos da lista em block para se retirar o ponto da lista não ordenada */
+  li { 
+    display: block; 
+}
+
+/* Adição de margem à esquerda para que o bloco amarelo se aproximasse aos outros, tentando buscar o centro */
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    margin-left: 200px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+/* Transformação dos blocos de segundo e terceiro lugar em inline-block para ficarem lado a lado */
+
+  .second, .third {
+      display: inline-block
+       }
+
+ /* Títulos de premiação que deveriam ficar mais centralizados, usei margem esquerda para isso*/
+
+h3 {
+    margin-left: 205px;
+}
+
+/* Transformação das linhas abaixo dos títulos de premiação em inline para ficarem lado a lado */
+
+.inline {
+display: inline;
+}
+/* Adição de ids porque com classes não funcionavam as margens, usei margem à esquerda para tentar aproximar do proposto no exercício, sendo duas iguais em termos de margem e agrupadas */
+
+#segundo, #terceiro {
+    margin-left: 15px;
+}
+
+#primeiro {
+  margin-left: -10px;
+}
