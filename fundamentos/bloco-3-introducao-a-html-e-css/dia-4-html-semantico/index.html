@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+  
+<style>
+
+/* Tentativa de trazer o título h1, por margens, para mais centralizado em relação ao pódio */
+
+h1 {
+  position: relative;
+margin-left: 205px;
+  }
+
+ /* Transformação dos elementos da lista em block para se retirar o ponto da lista não ordenada */
+  li { 
+    display: block; 
+}
+
+/* Adição de margem à esquerda para que o bloco amarelo se aproximasse aos outros, tentando buscar o centro */
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    margin-left: 200px;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+
+/* Transformação dos blocos de segundo e terceiro lugar em inline-block para ficarem lado a lado */
+
+  .second, .third {
+      display: inline-block
+       }
+
+ /* Títulos de premiação que deveriam ficar mais centralizados, usei margem esquerda para isso*/
+
+h3 {
+    margin-left: 205px;
+}
+
+/* Transformação das linhas abaixo dos títulos de premiação em inline para ficarem lado a lado */
+
+.inline {
+display: inline;
+}
+/* Adição de ids porque com classes não funcionavam as margens, usei margem à esquerda para tentar aproximar do proposto no exercício, sendo duas iguais em termos de margem e agrupadas */
+
+#segundo, #terceiro {
+    margin-left: 15px;
+}
+
+#primeiro {
+  margin-left: -10px;
+}
+
+</style>
+
+  </head>
+  <body>
+    <header>
+      <h1>Hackathon Results</h1>
+    </header>
+    <section>
+      <ul>
+        <li class="first">1º - Equipe 1</li>
+        <li class="second">2º - Equipe 2</li>
+        <li class="third">3º - Equipe 3</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Premiação Primeiro Lugar:</h3>
+      <ul>
+        <li class="inline" id="primeiro">| R$ 1000,00 por integrante da equipe |</li>
+        <li  class="inline">| Bootcamp de 2 meses com possibilidade de contratação |</li>
+      </ul>
+      <h3>Premiação Segundo Lugar:</h3>
+      <ul>
+        <li class="inline" id="segundo" >| R$ 600,00 por integrante da equipe |</li>
+        <li class="inline"  >| Participação no processo seletivo para o Bootcamp |</li>
+      </ul>
+      <h3>Premiação Terceiro Lugar:</h3>
+      <ul>
+        <li class="inline" id="terceiro">| R$ 300,00 por integrante da equipe |</li>
+        <li class="inline">| Participação no processo seletivo para o Bootcamp |</li>
+      </ul>
+    </section>
+  </body>
+</html>
