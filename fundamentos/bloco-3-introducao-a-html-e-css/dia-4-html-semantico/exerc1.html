@@ -20,25 +20,58 @@ body {
 
        .espaçamento-nav {
            display: inline-block;
-      margin-left: 80px;
-    margin-right: 60px;
-    border: 6px solid rgb(6, 78, 6);
+      margin-left: 40px;
+    margin-right: 100px;
+    border: 3px solid rgb(6, 78, 6);
     background-color: rgb(110, 158, 110);
-    color: white;
-    font-size: 17px;
+    color: black;
+    font-size: 17.5px;
         }
+
+        .espaçamento-nav:hover {
+            background-color: rgb(18, 150, 18);
+                    }
 
        p {
      text-align: justify;
        }
 
        table {
-width: 50%;
-margin: auto;
+      width: 50%;
+     margin: auto;
        }
 
-       .tabela, .footer, .header {
+       .tabela, .footer, .header, h3 {
      text-align: center;
+       }
+
+       .parag {
+        font-size: 17px;
+       }
+
+       .wiki, .aquaa3, .figgy, .youtube {
+           color: black;
+       }
+
+       .imgfato, .video {
+margin-left: 30%;
+margin-right: 50%;
+				
+       }
+
+       h3 {
+           background-color: black;
+           color: white;
+       }
+
+       .header {
+           background-color: white;
+           color: red;
+       }
+
+      .vid {
+background-color: beige;
+color: rgb(128, 47, 47);
        }
 
     </style>
@@ -64,17 +97,15 @@ Crie um link chamado Contato . -->
 Divida em seções.
 O artigo terá o subtítulo Fatos sobre o Stomatopoda. 1ª sessão: É necessário que conste nessa seção seu nome científico , que é Odontodactylus scyllarus , em itálico. Além disso, é preciso que haja informação tabular a respeito de sua classificação científica, em específico: Reino , Filo , Subfilo , Classe , Subclasse e Ordem. -->
 
-
-
 <article>
 
-<h1>FATOS INTERESSANTES:</h1>
+
 <h2>Fatos sobre o Stomatopoda:</h2>
 
 <section>
 <h3>Informações Gerais:</h3>
 
-<p> Stomatopoda (ou estomatópode), cujo nome científico é <em>Odontodactylus scyllarus</em>, são chamados popularmente de tamarutacas ou de lacraias-do-mar no Brasil. É uma ordem de crustáceos marinhos que agrupa cerca de 400 espécies, caracterizadas principalmente pela morfologia da segunda pata torácica, que é modificada em apêndice subquelado, lembrando uma pata de louva-a-deus. </p>
+<p class="parag"> Stomatopoda (ou estomatópode), cujo nome científico é <em>Odontodactylus scyllarus</em>, são chamados popularmente de tamarutacas ou de lacraias-do-mar no Brasil. É uma ordem de crustáceos marinhos que agrupa cerca de 400 espécies, caracterizadas principalmente pela morfologia da segunda pata torácica, que é modificada em apêndice subquelado, lembrando uma pata de louva-a-deus. </p>
 <br><br>
 
 <!-- Colocar tabela -->
@@ -122,22 +153,33 @@ Adicione, para cada seção, parágrafo(s) descrevendo o fato escolhido. Destaqu
 Adicione, para cada seção, uma imagem, como forma de ilustrar o fato. -->
 <section>
   
-    <h3>Fatos interessante - :</h3>
+    <h3>Fato interessante 1 - Visão:</h3>
 <p>
+Estomatópodes têm a visão mais complexa no reino animal, excedendo até a das borboletas. O camarão mantis tem olhos compostos montados em caules e <strong>pode girá-los independentemente um do outro</strong> para examinar seus arredores. Enquanto os humanos têm três tipos de fotorreceptores, os olhos de um camarão mantis têm entre 12 e 16 tipos de células fotorreceptoras. Algumas espécies podem até ajustar a sensibilidade de sua visão de cores.</p>
 
-</p>
+<img class="imgfato" src="http://4.bp.blogspot.com/-nCRuuIIK7Bk/VVUbUSNT16I/AAAAAAAAA8M/CP3mDt2s6Gk/s640/uw-2010-06-11.jpg" width="300px" alt="Olhos do Stomatopoda">
+
+
 </section>
 
 <br>
 
 <section>
-     <h3>Fatos interessante - :</h3>
-
+     <h3>Fato interessante 2 - Super-soco:</h3>
+<p>O Camarão Mantis esmagador possui dois apêndices bem desenvolvidos (semelhantes a um martelo), chamados de Porretes de Dáctilo. Com essas “super patas” o animal espanca e esmaga suas presas em uma intensidade de aproximadamente <strong>60 kg/cm²</strong> (daí o motivo de um de seus nomes ser lagosta-boxeadora).</p>
 </section>
+
+<img class="imgfato" src="https://www.aquaa3.com.br/wp-content/uploads/2020/09/animal-mais-forte-mundo-768x551.png" width="300px" alt="Comparação do Stomatopoda com o super-herói flash">
 
 
 <section>
-    <h3>Fatos interessante - :</h3>
+    <h3>Fatos interessante 3 - Mais rápido no gatilho:</h3>
+
+<p>Além da enorme potência de seu soco, esse animal consegue movimentar seus apêndices tal qual um tiro de arma de fogo: seu golpe pode chegar a uma velocidade <strong>720 km/h.</strong> Curiosamente, tanto a força quanto rapidez do ataque, não danificam sua estrutura corporal. </p>
+
+<img class="imgfato" src="https://www.aquaa3.com.br/wp-content/uploads/2020/09/Animal-mais-rapido-768x551.png" width="300px" alt="Comparação do Stomatopoda com o super-herói flash">
+
+
 
 </section>
 
@@ -148,19 +190,24 @@ Adicione, para cada seção, uma imagem, como forma de ilustrar o fato. -->
 
 <h2>Referências bibliográficas </h2>
 <ol>
-    <li> <a href="https://pt.wikipedia.org/wiki/Stomatopoda" target="_blank"> Wikipédia</a></li>
-    <li>dsdsad</li>
-    <li>dsdsad</li>
-    <li>dsdsad</li>
+    <li> <a class="wiki" href="https://pt.wikipedia.org/wiki/Stomatopoda" target="_blank"> Wikipédia</a></li>
+    <li> <a class="figgy" a href="https://br.figgysfoodtruck.com/2076-mantis-shrimp-facts-stomatopoda.html" target="_blank"> Figgy's</a></li>
+    <li> <a class="aquaa3" href="https://www.aquaa3.com.br/curiosidades-camarao-mantis/" target="_blank"> Aquaa3</a></li>
+    <li> <a class="youtube" href="https://www.youtube.com/watch?v=3fFhsewo5oU/" target="_blank"> Youtube</a></li>
 </ol>
 
 </section>
-
+<br>
 
 <!-- Adicione um conteúdo adjacente ao artigo, disponibilizando um link para este vídeo, que mostra o animal em ação. -->
 
 <aside>
-    Veja esse vídeo  
+  <h3 class="vid">Veja só esse vídeo da linda e devastadora LAGOSTA BOXEADORA em ação!</h3>
+
+      <br><br>
+
+    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/3fFhsewo5oU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </aside>
 
 </article>
