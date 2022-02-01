@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LGPDoces</title>
+</head>
+<body>
+
+    <!-- Crie um cabeçalho para a página. Adicione um id para seu cabeçalho; Crie um menu para o cabeçalho:
+
+Adicione 3 elementos h3 com os nomes "SOBRE", "SERVIÇOS" e "CONTATO", que deverão ficar à esquerda do cabeçalho;
+Adicione um elemento h1 com o nome "LGPDoces", que deverá ficar à direita do cabeçalho;-->
+
+<!-- Cire uma navegação interna no site:
+
+Utilize a tag a para criar uma navegação interna através do menu do cabeçalho do site. Ao clicar em "SOBRE", a pessoa deve ser redirecionada para a primeira seção (que fala sobre a confeitaria); ao clicar em "SERVIÇOS", deverá ser redirecionada para a seção que lista os doces produzidos; ao clicar em "CONTATO", deverá ser redirecionada para a seção com os links para as redes sociais. -->
+
+    <header id="landing">
+        <nav>
+<h3> <a class="sobre" href="#seçao1"> SOBRE </h3></a>
+<h3> <a class="servico"href="#seçao2"> SERVIÇOS </h3></a>
+<h3> <a class="contato" href="#seçao3">CONTATO </h3></a>
+<h1 class="lgp">LGPDoces</h1>
+    </header>
+</nav>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Crie uma seção e atribua uma classe e um id a ela. Crie um h2 com o texto "Sobre nós" dentro da seção e adicione um id para ele;
+Crie um parágrafo com o texto "Somos a LGPDoces, uma confeitaria que está há 10 anos no mercado oferecendo o melhor da confeitaria. Nossa missão é levar mais sabor e alegria para todas as pessas consumidoras e você pode ser uma delas! Veja o que nós oferecemos." e adicione um id para ele; -->
+
+    <section class="section1" id="seçao1">
+<h2 id="sobre">Sobre nós</h2>
+<p id="parag1">Somos a LGPDoces, uma confeitaria que está há 10 anos no mercado oferecendo o melhor da confeitaria. Nossa missão é levar mais sabor e alegria para todas as pessas consumidoras e você pode ser uma delas! Veja o que nós oferecemos.</p>
+    </section>
+
+    <!-- Crie uma seção e atribua uma classe e um id a ela.  Crie um h2 dentro dessa seção. Dentro da pasta img, há 4 imagens de produtos oferecidos. Para cada imagem, dentro da seção criada neste passo (6), crie um article e coloque dentro dele a imagem e o texto a ela relacionado. . -->
+
+<section class="section2" id="seçao2">
+<h2 id="oferece">Serviços oferecidos</h2>
+<article>
+    <img src="./img/bolo.jpg" alt="foto bolo de chocolate com morangos" class="foto-bolo">
+    <h3 class="bolo">Temos deliciosos bolos para você!</h3>
+</article>
+
+<article>
+    <img src="./img/brigadeiros.jpg" alt="foto brigadeiro gourmet" class="foto-brigadeiro">
+    <h3 class="brigadeiro">Experimente nossos famosos brigadeiros gourmet!</h3>
+</article>
+
+<article>
+    <img src="./img/cupcakes.jpg" alt="foto cupcake" class="foto-cupcake">
+    <h3 class="cupcake"> Os melhores cupcakes para suas festas e dia a dia!</h3>
+</article>
+
+<article>
+    <img src="./img/torta.jpg" alt="foto torta de maçã" class="foto-torta">
+    <h3 class="torta"> Experimente também nossas saborosas tortas!</h3>
+</article>
+</section>
+
+<!-- Crie uma seção e atribua uma classe e um id a ela: Dentro dessa seção, adicione um h2 com o texto "Entre em contato através de nossas redes sociais!;
+Na pasta img há 3 imagens referentes a ícones de redes sociais. Para cada um dos ícones, dentro da seção criada neste passo (8), crie um elemento a que irá receber o ícone da rede social para que, quando for cliacado, redirecione para uma nova página. 
+Faça com que os ícones tenham largura de 64px;
+ -->
+
+<section class="section3" id="seçao3">
+<h2>Entre em contato através de nossas redes sociais!</h2>
+<br>
+
+<a href="https://www.whatsapp.com/?lang=pt_br" target="_blank">
+    <img src="./img/whatsapp.png" width="64px" alt="Ícone do whatsapp" class="socialmedia-icon">
+</a>
+
+<a href="https://www.facebook.com/" target="_blank">
+    <img src="./img/facebook.png" width="64px" alt="Ícone do facebook" class="socialmedia-icon">
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+    <img src="./img/instagram.png" width="64px" alt="Ícone do whatsapp" class="socialmedia-icon">
+</a>
+</section>
+<br>
+<!-- Crie um footer para a página: Faça com que esse footer tenha um id;
+Crie um parágrafo dentro do footer com o texto;
+ -->
+
+<footer id="footer">
+<p> Todos os direitos reservados | LGPDoces | 2022 </p>
+</footer>
+
+
+
+</body>
+</html>
