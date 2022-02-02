@@ -24,3 +24,31 @@ Se a nota for menor que 80 e maior ou igual a 60, imprima "Você está na nossa 
 Se a nota for menor que 60, imprima "Você foi reprovada(o)"
 Crie uma estrutura condicional utilizando o if , else if e else para criar o seu algoritmo, e os operadores lógicos que se aplicam a cada situação.
 Altere o valor da nota para verificar se as condições que você implementou funcionam;
+
+
+Exercício 4
+
+Crie uma constante chamada "currentHour" que recebe um número entre 4 e 24 de sua escolha, para representar as horas do dia.
+Crie uma variável chamada "message" que, inicialmente, é uma string vazia.
+Implemente condicionais para que:
+Se o horário for maior ou igual a 22, insira "Não deveríamos comer nada, é hora de dormir" na variável "message".
+Se o horário for maior ou igual a 18 e menor que 22, insira "Rango da noite, vamos jantar :D" na variável "message".
+Se o horário for maior ou igual a 14 e menor que 18, insira "Vamos fazer um bolo pro café da tarde?" na variável "message".
+Se o horário estiver entre 11 e 14, insira "Hora do almoço!!!" na variável "message".
+Se o horário estiver entre 4 e 11, insira "Hmmm, cheiro de café recém passado" na variável "message".
+Agora imprima a variável message fora das suas condições.
+
+
+Exercício 5
+
+Crie uma variável chamada "weekDay" que recebe a string "quarta-feira".
+Implemente condicionais para que:
+Se nossa variável "weekDay" for "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira" ou "sexta-feira", imprima "Oba, mais um dia de aprendizado na Trybe >:D".
+Se for algum dia de fim de semana, imprima "FINALMENTE, descanso merecido UwU".
+Experimente trocar o valor da string ou até mesmo montar seu próprio algoritmo. Esse assunto é muito importante para seu aprendizado :).
+
+
+Exercício 6
+
+Crie uma variável para armazenar o estado da pessoa candidata no processo seletivo, que pode ser: 'aprovada' , 'lista' ou 'reprovada' ;
+Crie uma estrutura condicional com o switch/case que irá imprimir as mensagens do exercício anterior se o estado da pessoa candidata for 'aprovada' , 'lista' ou 'reprovada' . Como default , imprima a mensagem de 'não se aplica' .
