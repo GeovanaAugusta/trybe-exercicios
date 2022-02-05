@@ -3,18 +3,24 @@
 let numerosPrimos = [];
 let divisores = 0;
 let divisao = [];
+let maiorPrimo;
 
 for (let index = 0; index < 51; index +=1) {
    
 numerosPrimos.push(index);
 }
-console.log(numerosPrimos)
+// console.log(numerosPrimos)
 
 
 for (let index = 0; index <= numerosPrimos.length; index +=1) {
-    if (numerosPrimos[index] % index === 0);
+    if (numerosPrimos[index] % index === 0) {
     divisores = divisores + 1;
-} if (divisores > 2) {
-    console.log("Primo")
+} else if (divisores <= 2) {
+    divisao.push(numerosPrimos[index]);
 }
 
+if (divisao[index] > maiorPrimo ) {
+    maiorPrimo = divisao[index]
+}
+}
+console.log(maiorPrimo)
