@@ -9,7 +9,7 @@ let contadorDivisoes;
 for (let index = 0; index < 51; index +=1){
     numeros[index] = index;
 }
-// Aqui vem dois laços for, ambos para o array numeros, mas com index de nomes diferentes, de forma que comparem número a  número, em termos de divisão e resto para adicionar ao contador um valor que deve ser menor ou igual 2 para ser primo. Ou seja, desde o 0 vão comparando com o comando que vem abaixo do if, no qual 0 será testado com 0 a 50, 1 será testado com 0, 2 a 50, e assim suscessivamente.
+// Aqui vem dois laços for, ambos para o array numeros, mas com index de nomes diferentes, de forma que comparem número a  número, em termos de divisão e resto para adicionar ao contador um valor que deve ser menor ou igual 2 para ser primo. Ou seja, desde o 0 vão comparando com o comando que vem abaixo do if, no qual 0 será testado com 0 a 50, 1 será testado com 0, 2 a 50, e assim em diante.
 
 for (let index = 0; index < numeros.length; index += 1){
     contadorDivisoes = 0;
