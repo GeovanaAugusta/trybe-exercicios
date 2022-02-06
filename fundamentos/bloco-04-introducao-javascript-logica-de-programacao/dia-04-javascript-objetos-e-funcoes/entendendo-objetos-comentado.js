@@ -1,3 +1,5 @@
+// Objeto que armazena outro objeto dentro dele (banco). 
+
 let conta = {
     agencia: '0000',
     banco: {
