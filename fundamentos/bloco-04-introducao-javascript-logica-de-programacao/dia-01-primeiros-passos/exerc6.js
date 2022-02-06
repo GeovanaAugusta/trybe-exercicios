@@ -1,4 +1,9 @@
-const pecaXadrez = "BiSPo";
+// Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+// Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case) .
+// Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
+
+const pecaXadrez = "peÃo";
 
 switch (pecaXadrez.toLowerCase()) {
 case "cavalo":
@@ -24,6 +29,8 @@ case "torre":
 case "bispo":
   console.log("Movimenta-se em uma linha reta diagonalmente no tabuleiro, por quantas casas quiser, até encontrar o final do tabuleiro ou outra peça. Não pode pular outras peças e captura no mesmo caminho em que ele se move, parando na casa da peça adversária.");
   break;
+
+// Se nenhuma das opções acima, erro.
 
 default:
   console.log("Error")
