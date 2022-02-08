@@ -4,10 +4,10 @@
 
 // // Primeiro declarei as variáveis, uma com o array, outra com valor inicial de menor índice. Depois usei o for/in já que é usado pra acessar o ÍNDICE. E coloquei o array como o parâmetro da função, por fim pedi pra imprimir o menor índice.
 
-let menorIndice = 50;
 
 function numerosInteiros (numeros) {
 
+let menorIndice = numeros[0];
 
 for (let indice in numeros) {
     if (numeros[indice] < menorIndice) {

@@ -7,9 +7,9 @@ function nomes (words) {
 
 let maiorNome = words[0];
 
- for (let value in words) {
-    if (words[value].length > maiorNome.length) {
-        maiorNome = words[value];
+ for (let indice in words) {
+    if (words[indice].length > maiorNome.length) {
+        maiorNome = words[indice];
     }
 }
 return maiorNome;
