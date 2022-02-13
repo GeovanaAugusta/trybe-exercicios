@@ -215,6 +215,7 @@ event.target.style.color = divColor;
 } 
 else if (localDay.style.color === divColor) {
 event.target.style.color = 'rgb(119,119,119)';
+// O inverso não funciona
 }
 })
 }
