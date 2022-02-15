@@ -1,0 +1,19 @@
+body {
+margin-left: 20px;
+}
+
+#header {
+  
+    border: red 1.5px solid;
+    padding: 10px;
+    margin:auto;
+}
+
+#h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+input {
+    width: 40px;
+}
