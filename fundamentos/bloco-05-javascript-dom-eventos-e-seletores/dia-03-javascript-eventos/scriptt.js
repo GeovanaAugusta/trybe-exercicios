@@ -76,7 +76,7 @@ let newBackground = 'rgb(238,238,238)'; // É interessante que este botão possu
 let initialColor = 'white';
 
 localClick.addEventListener('click', function() {
-for (let index = 0; localHoliday.length; index += 1) {
+for (let index = 0; index < localHoliday.length; index += 1) {
   if (localHoliday[index].style.backgroundColor === initialColor) {
 localHoliday[index].style.backgroundColor = newBackground;
   } else {
@@ -223,5 +223,21 @@ event.target.style.color = 'rgb(119,119,119)'; // O inverso pra retornar ao norm
 }
 addColor();
 
+// Compromisso ser adicionado na tela
+function butto() {
+  let inputt = document.querySelector('#task-input');
+  let botan = document.querySelector('#btn-add');
+  botan.addEventListener('click', function(){
+  console.log('clique')
+    let work = inputt.value;
+   console.log(work)  
+   let workList = document.querySelector('.task-list');
+   const worksLists = document.createElement('li');
+   workList.appendChild(worksLists);
+    worksLists.innerHTML = work;
+    })
+   
+  // containerWork.appendChild(botan);
 
-
+}
+butto();
