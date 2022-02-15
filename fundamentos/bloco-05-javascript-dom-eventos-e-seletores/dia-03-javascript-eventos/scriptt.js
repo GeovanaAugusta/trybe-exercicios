@@ -201,25 +201,27 @@ eventClicker();
 // Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 
 function addColor () {
-let localDay = document.getElementById('days'); // Caminho dos dias
+let localDay = document.getElementById('days'); // Caminho dos dias que é o local do evento
 let tagDiv = document.querySelector('.task');
-let divColor = tagDiv.style.backgroundColor; // Caminho da tag div para buscar sua cor
-let tagSelected = document.getElementsByClassName('task selected');
+let classSelected = document.getElementsByClassName('task selected');
+let greenTaskColor = tagDiv.style.backgroundColor;
 
 localDay.addEventListener('click', function(event){  
+  console.log(classSelected);
 console.log('clicada');
-
-// for (let index = 0; index < localDay.length; index += 1) {
-if (localDay.style.color !== divColor) {
-event.target.style.color = divColor;  
-} 
-else if (localDay.style.color === divColor) {
-event.target.style.color = 'rgb(119,119,119)';
-// O inverso não funciona
+console.log(classSelected.length)
+let eventTargetColor = event.target.style.color;
+if (classSelected.length > 0 && eventTargetColor !== greenTaskColor) {
+  // A task selected precisa ser maior que 0, ou seja, precisa ser ativada pelo elemento task, para a partir daí ao clicar no dia, transfira a cor, porque o dia fará o tamanho da classe ser 1, logo, maior que 0. A outra condição é o que o evento cor seja diferente da cor da task inicial que é verde, já pintar de verde algo verde não faria sentido.
+let color = classSelected[0].style.backgroundColor;
+event.target.style.color = color;
+} else if (eventTargetColor === greenTaskColor && classSelected.length !== 0) {
+event.target.style.color = 'rgb(119,119,119)'; // O inverso pra retornar ao normal, se o evento cor for igual ao verde e a classe task selected ter tamanho # de 0, a cor voltará ao estado inicial que é o cinza.
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .l
 }
 })
 }
 addColor();
-// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+
 
 
