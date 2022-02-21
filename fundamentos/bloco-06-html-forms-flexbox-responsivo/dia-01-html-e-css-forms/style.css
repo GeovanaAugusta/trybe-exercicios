@@ -1,0 +1,51 @@
+#block {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+h1 {
+  margin-left: 25px;
+  border: solid rgb(85, 156, 85) 1px;
+  color: rgb(24, 87, 24);
+  display: inline-block;
+  background-color: rgb(111, 219, 111);
+  font-weight: 800;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(141, 219, 141);
+}
+
+#button-enviar {
+  margin-bottom: 15px;
+}
+
+#background {
+  background-color: rgb(125, 173, 125);
+  border: solid 2px;
+  width: 50%;
+  margin: auto;
+}
+
+header {
+  margin-right: -1050px;
+  display: inline-block;
+}
+
+#saiba {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  /* border: solid black 0.8px; */
+  display: inline;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: blue;
+}
