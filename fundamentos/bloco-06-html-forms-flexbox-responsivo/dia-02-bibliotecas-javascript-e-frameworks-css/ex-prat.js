@@ -2,33 +2,102 @@ const submitButton = document.getElementById("button-enviar");
 const clearButton = document.getElementById("button-limpa");
 const checkboxPhoto = document.getElementById("checkbox-foto");
 
-// A TrybeTrip precisa muito de fotos para divulgar seus concursos. Tendo isso em mente, faça com que somente quem autorizar o uso de imagens possa enviar suas informações.
 
-submitButton.addEventListener("click", (event) => {
-  const email = document.getElementById("email");
-  const emailDetails = email.value;
-  const name = document.getElementById("nome");
-  const nameDetails = name.value;
-  const textArea = document.getElementById('textarea');
-  const textAreaDetails = textArea.value;
-  if (
-    emailDetails === "" ||
-    emailDetails.length < 10 ||
-    emailDetails.length > 50 ||
-    nameDetails === "" ||
-    nameDetails.length < 10 ||
-    nameDetails.length > 40 ||
-    textAreaDetails > 500 
-  ) {
-    alert("Dados inválidos");
-  } else {
-    alert("Dados enviados com sucesso!");
+
+const validate = new JustValidate(
+  '#form', 
+  {
+    errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+      border: '1px solid red',
+    },
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: 'red',
+      textDecoration: 'underlined',
+    },
+    focusInvalidField: true,
+    lockForm: true,
+    tooltip: {
+      position: 'top',
+    },
+  },
+);
+
+function clearFields() {
+  const formElements = document.querySelectorAll('input');
+  const textArea = document.querySelector('textarea');
+  for (let index = 0; index < formElements.length; index += 1) {
+    const userInput = formElements[index];
+    userInput.value = '';
+    userInput.checked = false;
   }
-  if (document.getElementById("checkbox-foto").checked === false) {
-    event.preventDefault();
-  } else if (document.getElementById("checkbox-foto").checked === true) {
-    return true;
+  textArea.value = '';
+};
+
+function enableSubmit() {
+  const submitBtn = document.querySelector('#submit-btn');
+  const agreement = document.querySelector('#agreement');
+  submitBtn.disabled = !agreement.checked;
+}
+
+
+
+var picker = new Pikaday({
+  field: document.getElementById('datepicker'),
+  format: 'D/M/YYYY',
+  toString(date, format) {
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+  },
+  parse(dateString, format) {
+      const parts = dateString.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
   }
 });
 
-// Faça a validação dos campos com limite de caracteres. Caso não estejam dentro do esperado ao clicar no botão de submit, um alerta deve ser mostrado com a mensagem: 'Dados Inválidos'. Caso contrário, a mensagem 'Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.' deverá aparecer na tela.
+const validation = new JustValidate('#form');
+
+validation
+  .addField('#name', [
+    {
+      rule: 'minLength',
+      value: 10,
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+    },
+    { 
+         
+      rule: 'required',
+      errorMessage: 'Name is requiered!',
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'minLength',
+      value: 10,
+    },
+    {
+      rule: 'maxLength',
+      value: 50,
+    },
+    {
+      rule: 'required',
+      errorMessage: 'Email is required',
+    },
+    
+  ]);
+
+  window.onload = function() {
+    const clearBtn = document.querySelector('#clear-btn');
+    clearBtn.addEventListener('click', clearFields);
+    const agreement = document.querySelector('#agreement');
+    agreement.addEventListener('change', enableSubmit);
+  };

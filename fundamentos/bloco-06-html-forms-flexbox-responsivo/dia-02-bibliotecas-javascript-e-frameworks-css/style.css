@@ -19,6 +19,10 @@ body {
   margin-bottom: 15px;
 }
 
+#button-limpa  {
+  margin-bottom: 15px;
+}
+
 #background {
   background-color: rgb(125, 173, 125);
   width: 57%;
@@ -31,20 +35,37 @@ header {
 }
 
 #saiba {
-  font-size: 18px;
+  font-size: 15px;
   color: black;
   font-weight: 600;
     text-align: center;
+}
 
 #link {
   color: black;
 }
 
-a:hover {
+#link:hover {
   color: blue;
-} 
+}
 
-#textarea {
+
+#select {
   width: 100px;
-  margin-right: 200px;
+}
+
+.size {
+  width: 700px;
+}
+
+#date {
+  width: 150px;
+}
+
+@import './node_modules/pikaday/css/pikaday.css';
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
 }
