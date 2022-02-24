@@ -84,10 +84,9 @@ p strong {
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .trick {
-        font-size: 40px;
-        display: inline;
+     background-color: #0255c2;
     }
 }
 /* 
