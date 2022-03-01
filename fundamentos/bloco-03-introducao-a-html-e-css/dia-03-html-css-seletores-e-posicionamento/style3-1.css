@@ -1,5 +1,6 @@
-h1, p {
-text-align: center;
+h1,
+p {
+    text-align: center;
 }
 
 ol.lista li:hover {
@@ -7,12 +8,9 @@ ol.lista li:hover {
 }
 
 ol.lista li:active {
-   font-family: 'Courier New', Courier, monospace;
-  
+    font-family: "Courier New", Courier, monospace;
 }
 
 div {
     list-style: none;
 }
-
-

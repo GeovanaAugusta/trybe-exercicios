@@ -23,7 +23,7 @@ margin: 30px;
 
 /* insira na classe abaixo uma borda com valor '5px solid black' para aplicá-la ao item D */
 .border {
-  border: 5px solid black;
+  border: 5px solid rgb(65, 63, 63);
 }
 
 .caixa width-and-height {

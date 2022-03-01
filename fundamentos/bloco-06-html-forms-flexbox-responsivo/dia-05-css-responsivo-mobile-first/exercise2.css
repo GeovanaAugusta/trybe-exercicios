@@ -6,6 +6,10 @@ html {
     box-sizing: inherit;
   }
 
+  @media screen {
+    
+  }
+
   /* 1 - Utilizando a abordagem mobile first e media queries , crie três versões de layout diferentes para essa página . Cada layout deve corresponder a um tamanho diferente de página (pequeno, médio e grande) . Faça pelo menos um commit para cada layout ;
 2 - Para fazer isso de forma adequada, você deve prestar atenção no conteúdo da página e pensar em como mostrá-lo em cada um dos tamanhos de tela:
 Onde a lista de capítulos deve estar posicionada?

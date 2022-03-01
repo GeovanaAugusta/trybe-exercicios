@@ -10,8 +10,10 @@
     box-sizing: inherit;
   }
   
-  body {
-  
+    
+    body {
+margin: 15px;
+font-size: 28px;
   }
   
   article {
@@ -19,7 +21,7 @@
   }
   
   h1 {
-  
+  font-size: 14px;
   }
   
   h2 {
@@ -40,11 +42,39 @@
   
   figure {
       margin: 0;
+      padding: 10px;
   }
   
   figcaption {
     font-size: .8em;
   }
+
+  /* 6 */
+
+  @media screen and (min-width: 320px) and (max-width:680px) {
+     body {
+     background-color: rgb(255, 127, 212);
+     font-size: 20px;
+     margin: 20px;
+   } 
+   section {
+     display:flex;
+    flex-wrap: wrap;
+       }
+       figure {
+         width: 40%;
+       }
+  } 
+
+  /* 7 */
+
+@media screen and (min-width:1200px) and (max-width: 1300px) {
+  body {
+    background-color: blueviolet;
+    font-size: 20px;
+    margin: 20px;
+  }
+}
 
   /* Realize as seguintes tarefas:
 1 - Faça o tamanho da fonte ser maior;
