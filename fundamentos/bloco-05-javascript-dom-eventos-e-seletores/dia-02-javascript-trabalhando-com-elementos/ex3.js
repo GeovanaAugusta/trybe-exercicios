@@ -1,4 +1,3 @@
-
 // Crie um irmão para elementoOndeVoceEsta.
 
 let container = document.getElementById("elementoOndeVoceEsta");
@@ -10,9 +9,8 @@ console.log(creatBrother);
 // Crie um filho para elementoOndeVoceEsta .
 
 let creatChild = document.createElement("section");
-console.log(creatChild)
+console.log(creatChild);
 container.appendChild(creatChild);
-
 
 // Crie um filho para primeiroFilhoDoFilho.
 
@@ -24,11 +22,9 @@ console.log(childOfFirstChild);
 
 container2.appendChild(childOfFirstChild);
 
-
-
 // A partir desse filho criado, acesse *terceiroFilho*.
 
-let thirdChi = childOfFirstChild.parentElement.parentElement.parentElement.lastElementChild.previousElementSibling;
-console.log(thirdChi)
-
-
+let thirdChi =
+  childOfFirstChild.parentElement.parentElement.parentElement.lastElementChild
+    .previousElementSibling;
+console.log(thirdChi);

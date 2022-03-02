@@ -2,25 +2,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>  
-  <main>
-    <div id="start"></div>
-    nó
-    <p>elemento</p>
-  </main>
-  <script>
-// arquivo script.js
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="start"></div>
+      nó
+      <p>elemento</p>
+    </main>
+    <script>
+      // arquivo script.js
 
-console.log(document.getElementById('start').nextSibling) // nó, retorna realmente o próximo nó, seja um texto
+      console.log(document.getElementById("start").nextSibling); // nó, retorna realmente o próximo nó, seja um texto
 
-console.log(document.getElementById('start').nextElementSibling) // <p>elemento</p> e aqui já retorna o próximo elemento propriamente dito, próxima tag
-
-  </script>
-</body>
+      console.log(document.getElementById("start").nextElementSibling); // <p>elemento</p> e aqui já retorna o próximo elemento propriamente dito, próxima tag
+    </script>
+  </body>
 </html>
