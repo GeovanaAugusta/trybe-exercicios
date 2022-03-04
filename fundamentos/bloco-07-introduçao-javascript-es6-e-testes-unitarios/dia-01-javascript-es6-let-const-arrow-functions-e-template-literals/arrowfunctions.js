@@ -7,8 +7,8 @@ const printName = () => {
 
 //   Quando não há nada no corpo da função além do que será retornado, a sintaxe da arrow function nos permite simplificar ainda mais a função printName omitindo o return e as chaves:
 
-const printName = () => 'Lucas';
-console.log(printName());
+const printName1 = () => 'Lucas';
+console.log(printName1());
 
 
 // Mas lembre-se que podemos omitir os parênteses apenas em um cenário:
