@@ -86,7 +86,7 @@ console.log(getValueByNumber(lesson1, 0));
 
 const verifyPair = (object, key, value) => {
     const arrayKeyValue = Object.entries(object);
-    // console.log(arrayKeyValue)
+    console.log(arrayKeyValue)
     let equal = false;
     for (let keys in arrayKeyValue) {
       if (arrayKeyValue[keys][0] === key && arrayKeyValue[keys][1] === value) equal = true;
