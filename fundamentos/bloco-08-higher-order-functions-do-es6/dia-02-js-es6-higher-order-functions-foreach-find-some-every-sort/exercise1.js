@@ -1,5 +1,4 @@
-const books = [
-  {
+const books = [{
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
@@ -67,68 +66,88 @@ const books = [
 // 1 Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 
 function authorBornIn1947(array) {
-    // escreva aqui o seu código
-    const born1947 = array.find((element) => element.author.birthYear === 1947).name 
-    console.log(born1947)
-  }
-  authorBornIn1947(books)
+  // escreva aqui o seu código
+  return array.find((element) => element.author.birthYear === 1947).name;
+}
+console.log(authorBornIn1947(books));
+
+
+
 
 // 2  Retorne o nome do livro de menor nome.
 
 function smallerName(array) {
-    let nameBook;
-    // escreva aqui o seu código
-  
-    array.forEach((element) => {
-      if (!nameBook || element.name.length < nameBook.length) {
-        nameBook = element.name;
-      }
-    });
-    // Variável nameBook que receberá o valor do menor nome;
-    return nameBook;
-  }
-  console.log(smallerName(books))
+  let nameBook;
+  // escreva aqui o seu código
+
+  array.forEach((element) => {
+    if (!nameBook || element.name.length < nameBook.length) {
+      nameBook = element.name;
+    }
+  });
+  // Variável nameBook que receberá o valor do menor nome;
+  return nameBook;
+}
+console.log(smallerName(books));
+
+
 
 
 // 3  Encontre o primeiro livro cujo nome possui 26 caracteres.
 
-    function getNamedBook() {
-    return books.find((book) => book.name.length === 26);
-  }
-  console.log(getNamedBook())
+function getNamedBook(array) {
+  return array.find((book) => book.name.length === 26);
+}
+console.log(getNamedBook(books));
+
+
+
+
 
 //  4  Ordene os livros por data de lançamento em ordem decrescente.
 
-  
-  function booksOrderedByReleaseYearDesc() {
-    // escreva aqui seu código
-    return books.sort((date1, date2) => date2.releaseYear - date1.releaseYear)
-  }
-  console.log(booksOrderedByReleaseYearDesc());
+function booksOrderedByReleaseYearDesc(array) {
+  // escreva aqui seu código
+  return array.sort((date1, date2) => date2.releaseYear - date1.releaseYear)
+}
+console.log(booksOrderedByReleaseYearDesc(books));
+
+
+
+
 
 // 5  Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
 
-
-function everyoneWasBornOnSecXX() {
+function everyoneWasBornOnSecXX(array) {
   // escreva seu código aqui
+  return array.every((book) => book.author.birthYear >= 1901 && book.author.birthYear <= 2000);
 
- 
 }
+console.log(everyoneWasBornOnSecXX(books));
+
+
+
+
 
 // 6 Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário.
-function someBookWasReleaseOnThe80s(books) {
+
+function someBookWasReleaseOnThe80s(array) {
   // escreva seu código aqui
-  
-  array.forEach((element) => {
-    if (element.author.releaseYear) {
-     
-}
-  })
-}
+  return array.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 
-// 7 Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
+}
+console.log(someBookWasReleaseOnThe80s(books));
 
 
-function authorUnique() {
-  // escreva seu código aqui
+
+
+// 7 Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário. Se some é algum, !some nega isso, tornando-se nenhum
+
+
+function authorUnique(array) {
+  return array.every((bookEvery) =>
+    !array.some((bookSome) =>
+      (bookSome.author.birthYear === bookEvery.author.birthYear) &&
+      (bookSome.author.name !== bookEvery.author.name)));
 }
+console.log(authorUnique(books));
