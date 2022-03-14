@@ -17,10 +17,10 @@ console.log(sumNumbers); // 113
 const collection = [1, 2, 3, 4, 5];
 
 const getSuum = (accumulator, number) => {
-  console.log(accumulator); 
+  // console.log(accumulator); 
   return accumulator + number;
 };
 
 
-const suumNumbers = collection.reduce(getSuum);
+const suumNumbers = collection.reduce(getSuum, 0);
 console.log(suumNumbers);
