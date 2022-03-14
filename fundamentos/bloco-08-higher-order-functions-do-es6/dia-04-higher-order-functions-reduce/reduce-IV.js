@@ -141,9 +141,9 @@ const estudantes = [{
 ];
 
 
-const getBestClass = (acc, curent) => {
-    if (acc.nota > curent.nota) return acc;
-    return curent;
+const getBestClass = (acc, current) => {
+    if (acc.nota > current.nota) return acc;
+    return current;
 };
 
 const reportBetter = (array) => array.map((student) => ({
