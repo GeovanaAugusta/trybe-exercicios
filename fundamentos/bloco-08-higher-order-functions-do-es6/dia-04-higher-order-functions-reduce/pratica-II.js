@@ -74,7 +74,7 @@ const books = [{
 
 function reduceNames(array) {
     // escreva seu código aqui
-    const authorNames = array.map((element) => element.author.name).reduce((accumulator, currentValue) => accumulator + ', ' + currentValue)
+    const authorNames = array.map((element) => element.author.name).reduce((accumulator, currentValue) => `${accumulator}, ${currentValue}`)
     return authorNames
 }
 console.log(reduceNames(books))
