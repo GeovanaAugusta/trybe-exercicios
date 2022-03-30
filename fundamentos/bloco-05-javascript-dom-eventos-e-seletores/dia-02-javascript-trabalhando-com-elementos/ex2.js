@@ -35,9 +35,7 @@ console.log(text);
 
 // 7- Agora acesse o *terceiroFilho* a partir de elementoOndeVoceEsta. nextElementSibling : retorna o próximo elemento
 
-let thirdChild = document.getElementById(
-  "elementoOndeVoceEsta"
-).nextElementSibling;
+let thirdChild = document.getElementById('elementoOndeVoceEsta').nextElementSibling;
 console.log(thirdChild);
 
 // 8- Agora acesse o *terceiroFilho* a partir de pai. lastElementChild : retorna o último elemento filho.previousElementSibling : retorna o elemento anterior.
