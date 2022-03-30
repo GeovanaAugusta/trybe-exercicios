@@ -3,7 +3,7 @@
 let container = document.getElementById("elementoOndeVoceEsta");
 console.log(container);
 
-let creatBrother = document.createElement("section");
+let creatBrother = container.createElement("section");
 console.log(creatBrother);
 
 // Crie um filho para elementoOndeVoceEsta .
