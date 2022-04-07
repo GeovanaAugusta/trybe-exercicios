@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import Fixacao from './FixacaoBindThis';
 import FixacaoThisBind from './FIxacaoThisBind';
+import FixacaoState from './FixacaoState';
 
 function handleClick() {
   console.log('clicou')
@@ -24,6 +25,7 @@ class App extends React.Component {
       <button onClick={handleClick2}>Botão 3</button>
       <Fixacao />
       <FixacaoThisBind />
+      <FixacaoState />
     </div>
   );
 }
