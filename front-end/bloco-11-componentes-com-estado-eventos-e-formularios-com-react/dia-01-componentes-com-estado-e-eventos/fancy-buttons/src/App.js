@@ -3,6 +3,7 @@ import React from 'react';
 import Fixacao from './FixacaoBindThis';
 import FixacaoThisBind from './FIxacaoThisBind';
 import FixacaoState from './FixacaoState';
+import FixacaoAll from './FixacaoAll.js';
 
 function handleClick() {
   console.log('clicou')
@@ -26,6 +27,7 @@ class App extends React.Component {
       <Fixacao />
       <FixacaoThisBind />
       <FixacaoState />
+      <FixacaoAll />
     </div>
   );
 }
