@@ -6,7 +6,7 @@ import FixacaoState from './FixacaoState';
 import FixacaoAll from './FixacaoAll.js';
 
 function handleClick() {
-  console.log('clicou')
+  console.log('clicou') 
 }
 
 function handleClick1() {
