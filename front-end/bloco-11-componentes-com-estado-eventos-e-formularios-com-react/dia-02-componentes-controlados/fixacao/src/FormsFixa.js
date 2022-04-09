@@ -11,47 +11,45 @@ class FormFixa extends React.Component {
     }
   }
 
-handleChange1(event) {
-  this.setState({
-    nome: event.target.value,
-  })
-}
+  handleChange1(event) {
+    this.setState({
+      nome: event.target.value,
+    })
+  }
 
   render() {
     return (
-    <div>
-      <label> 
-      <select>
-      <option value="option">Option</option>
-      <option value="option2">Option2</option>
-      <option value="option3">Option3</option>
-      </select>
-      </label>
+      <form>
+        <label>
+          <select>
+            <option value="option">Option</option>
+            <option value="option2">Option2</option>
+            <option value="option3">Option3</option>
+          </select>
+        </label>
 
-      <label>
-      Nome
-      <textarea 
-      onChange={ this.handleChange1 }
-      name= 'nome'
-      value={this.state.nome}
-      />
-      </label>
+        <label>
+          Nome
+          <textarea
+            onChange={this.handleChange1}
+            name='nome'
+            value={this.state.nome}
+          />
+        </label>
 
-      <label> 
-      Email
-      <input>
+        <label>
+          Email
+          <input></input>
+        </label>
 
-      </input>
-      </label>
+        <label>
+          Oi
+          <textarea>
+            Digite algo
+          </textarea>
+        </label>
 
-      <label> 
-        Oi
-      <textarea>
-        Digite algo
-      </textarea>
-      </label>
-
-    </div>
+      </form>
     )
   }
 
