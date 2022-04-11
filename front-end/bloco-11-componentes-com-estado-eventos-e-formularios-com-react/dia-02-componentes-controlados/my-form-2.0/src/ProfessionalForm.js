@@ -1,48 +1,55 @@
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-class ProfessionalFormForm extends Component {
+class ProfessionalForm extends React.Component {
   render() {
     const { changeHandler } = this.props;
+
     return (
       <fieldset>
-        <legend>Dados profissionais:</legend>
-        <div className="container">
-          Resumo do currículo:
-          <textarea
-            name="resume"
-            // 2 Limite caracteres
-            maxLength="1000"
-            required
-            onChange={changeHandler}
-          />
-        </div>
-        <div className="container">
-          Cargo:
-            <input
-              type="text"
-              name="role"
-              // 2 Limite caracteres
-              maxLength="40"
-              required
-              onChange={changeHandler}
-              // 2 Quando o mouse passar por cima deste campo (evento onMouseEnter ), exibir um alerta dizendo 'Preencha com cuidado esta informação.'. Exiba essa mensagem apenas uma vez.
-              onMouseEnter={() => {
-                alert('Preencha com cuidado esta informação.');
-              }}
-            />
-        </div>
-        <div className="container">
-          Descrição do cargo:
-          <textarea
-            name="roleDescription"
-            // 2 Limite caracteres
-            maxLength="500"
-            onChange={changeHandler}
-          />
-        </div>
+        <label htmlFor="resume">Resumo do currículo</label>
+        <textarea
+          id="resume"
+          name="resume"
+          onChange={changeHandler}
+          maxLength="1000"
+          required
+        />
+
+        <br></br>
+
+        <label htmlFor="office">Cargo</label>
+        <textarea
+          id="office"
+          name="office"
+          onChange={changeHandler}
+          maxLength="40"
+          required
+          onMouseEnter={() => {
+            alert("Preencha com cuidado esta informação.");
+          }}
+        />
+
+        <br></br>
+
+        <label htmlFor="description">Descrição do cargo</label>
+        <textarea
+          id="description"
+          name="description"
+          onChange={changeHandler}
+          maxLength="500"
+          required
+        />
+
+        <br></br>
+        {/* Crie um botão que, ao ser clicado, monta uma <div> com o consolidado dos dados que foram inseridos no formulário.  */}
       </fieldset>
     );
   }
 }
 
-export default ProfessionalFormForm;
+export default ProfessionalForm;
+
+ProfessionalForm.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
+};

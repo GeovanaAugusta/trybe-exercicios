@@ -8,8 +8,8 @@ class FormError extends Component {
         {
           Object.keys(formError).filter((fieldName) => (
             formError[fieldName].length > 0
-          )).map((fieldName, i) => (
-            <p key={ i }>
+          )).map((fieldName, index) => (
+            <p key={ index }>
               { fieldName }
               { formError[fieldName] }
             </p>

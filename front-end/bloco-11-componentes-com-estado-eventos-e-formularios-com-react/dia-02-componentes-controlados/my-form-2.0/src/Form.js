@@ -1,34 +1,38 @@
-import React, { Component } from 'react';
-import PersonalForm from './PersonalForm'
-import ProfessionalForm from './ProfessionalForm'
+import React from "react";
+import PersonalForm from "./PersonalForm";
+import ProfessionalForm from "./ProfessionalForm";
+import PropTypes from "prop-types";
 
-class Form extends Component {
+class Form extends React.Component {
   render() {
-    const { sendForm, resetForm, changeHandler, currentState, onBlurHandler } = this.props;
-
+    const { changeHandler, blurHandler, sendForm, resetForm } = this.props;
     return (
       <form>
-        <PersonalForm
-          changeHandler={ changeHandler }
-          onBlurHandler= { onBlurHandler }
-          currentState= { currentState }
+        <PersonalForm changeHandler={changeHandler} blurHandler={blurHandler} />
+        <ProfessionalForm
+          changeHandler={changeHandler}
+          sendForm={sendForm}
+          resetForm={resetForm}
         />
-        <ProfessionalForm changeHandler={ changeHandler } />
-        {/* Crie um botão que, ao ser clicado, monta uma <div> com o consolidado dos dados que foram inseridos no formulário. */}
-        <input
-            type="button"
-            onClick={ sendForm }
-            value="Enviar"
-        />
-        {/* 2 Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também. */}
-        <input
-          type="reset"
-          onClick={ resetForm }
-          value="Limpar"
-        />
+
+<button type="button" onClick={sendForm}>
+          Enviar
+        </button>
+
+        <button type="reset" onClick={resetForm}>
+          Apagar
+        </button>
+
       </form>
     );
   }
 }
 
 export default Form;
+
+Form.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
+  blurHandler: PropTypes.func.isRequired,
+  sendForm:PropTypes.func.isRequired,
+  resetForm: PropTypes.func.isRequired,
+};

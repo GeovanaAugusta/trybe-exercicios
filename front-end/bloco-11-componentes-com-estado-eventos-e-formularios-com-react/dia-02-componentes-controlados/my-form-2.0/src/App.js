@@ -1,104 +1,80 @@
-import React, { Component } from 'react';
-import './App.css';
-import Form from './Form';
-import FormError from './FormError';
-import FormDataDisplay from './FormDataDisplay';
+import React from "react";
+import "./App.css";
+import Form from "./Form";
+import FormatDiv from "./FormatDiv";
 
-// this. state inicial
 const initialState = {
-  name: '',
-  email: '',
-  cpf: '',
-  address: '',
-  city: '',
-  countryState: '',
-  addressType: '',
-  resume: '',
-  role: '',
-  roleDescription: '',
-  formError: {},
+  name: "",
+  email: "",
+  cpf: "",
+  address: "",
+  city: "",
+  countryState: "",
+  residenceType: "",
+  resume: "",
+  office: "",
+  description: "",
   submitted: false,
-}
+};
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = initialState;
   }
 
-  changeHandler = event => {
+  changeHandler = (event) => {
     let { name, value } = event.target;
-    
+
     // Todos os caracteres devem ser transformados para UPPER CASE assim que forem digitados.
-    if (name === 'name') value = value.toUpperCase();
-    // 1 Remover qualquer caracter especial que seja digitado
-    if (name === 'address') value = this.validateAddress(value);
+    if (name === "name") value = event.target.value.toUpperCase();
+
+    // 727 https://stackoverflow.com/questions/4374822/remove-all-special-characters-with-regexp
+    if (name === "address") value = value.replace(/[^\w\s]/gi, "");
+
+    // Passei pra number o cpf
+    if (name === 'cpf') value = parseInt(value); 
 
     this.updateState(name, value);
-  }
+  };
 
-  onBlurHandler = event => {
+  blurHandler = (event) => {
     let { name, value } = event.target;
 
-    // 1 Ao remover o foco desse campo (evento onBlur ), verificar se o nome da cidade começa com números. Caso comece, limpar o campo.
-    if (name === 'city') value = value.match(/^\d/) ? '' : value; // typeof não funcionou
-
+    // Ao remover o foco desse campo (evento onBlur ), verificar se o nome da cidade começa com números. Caso COMECE, limpar o campo.
+    // 0 https://stackoverflow.com/questions/6031744/javascript-regex-to-check-if-a-value-begins-with-a-number-followed-by-anything-e
+    //34  https://stackoverflow.com/questions/39736188/check-if-string-starts-with-a-number
+    if (name === "city") value = value.match(/^\d/) ? "" : value;
     this.updateState(name, value);
-  }
+  };
+
+    // 2 Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
+    resetForm = () => { this.setState(initialState) };
+
+    // 2 Crie um botão que, ao ser clicado, monta uma <div> com o consolidado dos dados que foram inseridos no formulário.
+    sendForm = (event) => { 
+      event.preventDefault(); 
+      this.setState({ submitted: true })
+    };
 
   updateState(name, value) {
-    this.setState((state) => ({
+    this.setState(() => ({
       [name]: value,
-      formError: {
-        ...state.formError,
-        [name]: this.validateField(name, value)
-      }
     }));
   }
 
-// 1 Remover qualquer caracter especial que seja digitado
-// 727 https://stackoverflow.com/questions/4374822/remove-all-special-characters-with-regexp
-  validateAddress = address => address.replace(/[^\w\s]/gi, '')
-
-  handleSubmit = event => {
-    event.preventDefault();
-  }
-
-  validateField(fieldName, value) {
-    switch (fieldName) {
-      case 'email':
-        // Utilize regex para validar o campo email.O formato esperado é: trybe@gmail.com .
-        const isValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2})$/i)
-        return isValid ? '' : ' is invalid';
-      default:
-        break;
-    }
-    return '';
-  }
-
-  // 2 Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
-  resetForm = () => { this.setState(initialState) };
-
-  // 2 Crie um botão que, ao ser clicado, monta uma <div> com o consolidado dos dados que foram inseridos no formulário.
-  sendForm = () => { this.setState({ submitted: true }) };
-
   render() {
     const { submitted } = this.state;
-
     return (
-      <main>
+      <div className="App">
         <Form
+          changeHandler={this.changeHandler}
+          blurHandler={this.blurHandler}
           sendForm={this.sendForm}
           resetForm={this.resetForm}
-          changeHandler={this.changeHandler}
-          currentState={ this.state }
-          onBlurHandler={ this.onBlurHandler }
         />
-        <div className="container">
-          <FormError formError={this.state.formError} />
-        </div>
-        { submitted && <FormDataDisplay currentState={ this.state } /> }
-      </main>
+        { submitted && <FormatDiv currentState={ this.state } /> }
+      </div>
     );
   }
 }

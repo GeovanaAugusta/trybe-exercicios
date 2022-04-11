@@ -1,114 +1,148 @@
-import React, { Component } from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-// 1 Ao invés de digitar um a um em várias options, um array + um map resolve
-// Todos os estados do Brasil
-const states = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
+const states = [
+  "Acre",
+  "Alagoas",
+  "Amapá",
+  "Amazonas",
+  "Bahia",
+  "Ceará",
+  "Distrito Federal",
+  "Espírito Santo",
+  "Goiás",
+  "Maranhão",
+  "Mato Grosso",
+  "Mato Grosso do Sul",
+  "Minas Gerais",
+  "Pará",
+  "Paraíba",
+  "Paraná",
+  "Pernambuco",
+  "Piauí",
+  "Rio de Janeiro",
+  "Rio Grande do Norte",
+  "Rio Grande do Sul",
+  "Rondônia",
+  "Roraima",
+  "Santa Catarina",
+  "São Paulo",
+  "Sergipe",
+  "Tocantins",
+];
 
-class PersonalForm extends Component {
+class PersonalForm extends React.Component {
   render() {
-    const { changeHandler, onBlurHandler, currentState } = this.props;
+    const { changeHandler, blurHandler } = this.props;
     return (
       <fieldset>
-            <legend>Dados pessoais</legend>
-            <div className="container">
-              Nome:
-              <input
-                type="name"
-                name="name"
-                // 1 Limite caracteres
-                maxLength="40"
-                required
-                onChange={changeHandler}
-              />
-            </div>
-            <div className="container">
-              Email:
-              <input
-                type="email"
-                name="email"
-                // 1 Limite caracteres
-                maxLength="50"
-                required
-                onChange={changeHandler}
-              />
-            </div>
-            <div className="container">
-              CPF:
-              <input
-                type="text"
-                name="cpf"
-                // 1 Limite caracteres
-                maxLength="11"
-                required
-                onChange={changeHandler}
-              />
-            </div>
-            <div className="container">
-              Endereço:
-              <input
-                type="text"
-                name="address"
-                // 1 Limite caracteres
-                maxLength="200"
-                required
-                onChange={changeHandler}
-              />
-            </div>
-            <div className="container">
-              Cidade:
-              <input
-                type="text"
-                name="city"
-                // 1 Limite caracteres
-                maxLength="28"
-                required
-                value={currentState.city}
-                onBlur={onBlurHandler}
-                onChange={changeHandler}
-              />
-            </div>
-            <div className="container">
-              Estado:
-              <select
-                name="countryState"
-                required
-                onChange={changeHandler}
-                defaultValue=""
-              >
-                {/* Array de cidades, ao invés de um a um */}
-                <option value="">Selecione</option>
-                {
-                  states.map((value, key) => (
-                    <option key={ key }>{ value }</option>
-                  ))
-                }
-              </select>
-            </div>
-            <div className="container">
-              <label htmlFor="house">
-                <input
-                  type="radio"
-                  id="house"
-                  name="addressType"
-                  value="house"
-                  onChange={changeHandler}
-                />
-                Casa
-              </label>
-              <label htmlFor="apart">
-                <input
-                  type="radio"
-                  id="apart"
-                  name="addressType"
-                  value="apartment"
-                  onChange={changeHandler}
-                />
-                Apartamento
-              </label>
-            </div>
-          </fieldset>
+        <label htmlFor="name"> Nome: </label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          maxLength="40"
+          required
+          onChange={changeHandler}
+        ></input>
+
+        <br></br>
+
+        <label htmlFor="email"> Email: </label>
+        <input
+          id="email"
+          name="email"
+          type="text"
+          maxLength="50"
+          required
+          onChange={changeHandler}
+        ></input>
+
+        <br></br>
+
+        <label htmlFor="cpf"> CPF: </label>
+        <input
+          id="cpf"
+          name="cpf"
+          type="text"
+          maxLength="11"
+          required
+          onChange={changeHandler}
+        ></input>
+
+        <br></br>
+
+        <label htmlFor="address"> Endereço: </label>
+        <input
+          id="address"
+          name="address"
+          type="text"
+          maxLength="200"
+          required
+          onChange={changeHandler}
+        ></input>
+
+        <br></br>
+
+        <label htmlFor="city"> Cidade: </label>
+        <input
+          id="city"
+          name="city"
+          type="text"
+          maxLength="28"
+          required
+          onBlur={blurHandler}
+          onChange={changeHandler}
+        ></input>
+
+        <br></br>
+
+        {/* O controle select (combobox)  */}
+
+        <label htmlFor="countryState"> Estado: </label>
+        <select
+          name="countryState"
+          required
+          defaultValue=""
+          onChange={changeHandler}
+        >
+          {/* Array de cidades, ao invés de um a um */}
+          <option element="">Selecione</option>
+          {states.map((element, index) => (
+            <option key={index}>{element}</option>
+          ))}
+        </select>
+
+        <br></br>
+
+        <label htmlFor="option">Casa</label>
+
+        <input
+          id="option"
+          type="radio"
+          name="residenceType"
+          value="Casa"
+          required
+          onChange={changeHandler}
+        ></input>
+
+        <label htmlFor="option2">Apartamento</label>
+        <input
+          id="option2"
+          name="residenceType"
+          value="Apartamento"
+          onChange={changeHandler}
+          type="radio"
+          required
+        ></input>
+      </fieldset>
     );
   }
 }
 
 export default PersonalForm;
+
+PersonalForm.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
+  blurHandler: PropTypes.func.isRequired,
+};
