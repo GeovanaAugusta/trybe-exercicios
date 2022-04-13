@@ -36,6 +36,8 @@ class App extends React.Component {
     if (name === 'cpf') value = parseInt(value); 
 
     this.updateState(name, value);
+
+    
   };
 
   blurHandler = (event) => {
