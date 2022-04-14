@@ -1,12 +1,9 @@
-
 import './App.css';
-import Counter from './DadJoke';
-import Counter2 from './DadJoke2';
+import Counter2 from './Counter';
 
 function App() {
   return (
     <div className="App">
-      {/* <Counter />  */}
       <Counter2 />
     </div>
   );

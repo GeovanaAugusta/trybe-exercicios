@@ -1,21 +1,22 @@
-import React, { Component }from 'react';
+// App.js
+import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-        characters: [],
-    };
-  }
+    constructor(props){
+        super(props);
+        this.state = {
+            characters: [],
+        };
+      }
 
-  componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character')
-    .then(response => response.json())
-    .then(data => {
-      this.setState({characters: data.results})
-    })
-  }
+    componentDidMount() {
+      fetch('https://rickandmortyapi.com/api/character')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({characters: data.results})
+      })
+    }
 
   render() {
     const { characters } = this.state;
@@ -25,11 +26,11 @@ class App extends Component {
           Ricky and Morty Characters:
         </h1>
         <div className="body">
-          {characters.map(({ name, image }) => {
+          {characters.map((character) => {
             return (
-              <div className="container" key={name}>
-                <h3>{name}</h3>
-                <img src={image} alt={name}/>
+              <div className="container" key={character.name}>
+                <h3>{character.name}</h3>
+                <img src={character.image} alt={character.name}/>
               </div>
             )
           })}
