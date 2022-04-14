@@ -72,3 +72,5 @@ class DadJoke extends React.Component {
 }
 
 export default DadJoke;
+
+//  como atualizar arrays no estado com base no estado anterior! Use o spread operator! this.setState(({ meuArrayNoEstado }) => ({meuArrayNoEstado: [...meuArrayNoEstado, novoElemento] }))
