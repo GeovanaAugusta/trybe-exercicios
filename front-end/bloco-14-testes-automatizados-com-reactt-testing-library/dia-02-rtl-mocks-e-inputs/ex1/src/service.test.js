@@ -68,6 +68,8 @@ describe("Testando as funções stringToUpperCase, getFirstLetter e concString d
 
     // Após criar os mocks, faça os testes necessários para garantir que os mocks estão funcionando.
     expect(service.stringToUpperCase("OLÁ")).toBe("olá");
+    // Ou
+    //  expect(service.stringToUpperCase("OLÁ")).toBe("olá");
     expect(service.stringToUpperCase).toHaveBeenCalledTimes(1);
     expect(service.stringToUpperCase).toHaveBeenCalledWith("OLÁ");
 
@@ -146,6 +148,4 @@ describe("Testando a função fetchAPI do arquivo service.js", () => {
       expect(service.fetchAPI).toHaveBeenCalledTimes(1);
     });
   
-
-
     });
