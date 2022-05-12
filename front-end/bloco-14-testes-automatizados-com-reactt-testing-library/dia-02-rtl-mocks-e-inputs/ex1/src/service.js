@@ -41,13 +41,11 @@ const fetchAPI = () => {
   // seu código aqui
   // return fetch('https://dog.ceo/api/breeds/image/random')
   // .then((response) => response.json())
-  // .then((data) => data);
-  return fetch("https://dog.ceo/api/breeds/image/random").then(response =>
-  response
-    .json()
-    .then(json =>
-      response.ok ? Promise.resolve(json) : Promise.reject(json)
-    )
+  // .then((json) => response.ok ? Promise.resolve(json) : Promise.reject(json))
+  // .then((data) => data
+  return fetch("https://dog.ceo/api/breeds/image/random")
+  .then((response) => response.json()
+    .then((data) => response.ok ? Promise.resolve(data) : Promise.reject(data))
 );
 };
     //  console.log((fetchAPI));
