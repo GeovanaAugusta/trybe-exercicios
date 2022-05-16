@@ -1,74 +1,64 @@
-import React, { Component } from 'react'
+// src/Register.js
+import React from 'react';
+import { connect } from 'react-redux';
+import { addRegister } from '../redux/actions/action';
+import { Link } from 'react-router-dom';
 
-export class Cadastro extends Component {
-  constructor() {
-    super();
+class Cadastro extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
+      name: '',
+      age: '',
       email: '',
-      sehha: '',
     };
   }
 
-  handleChange({ target }) {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  }
+  validateRegister = () => {
+    const { name, age, email } = this.state;
+    this.props.addRegister({ name, age, email });
+    this.setState({
+      name: '',
+      age: '',
+      email: '',
+    });
+  };
 
-  handleClick = (event) => {
-    const { history } = this.props;
-
-    // const { email, senha } = this.state;
-
-    history.push('/clientesCadastrados');
-
-    event.preventDefault();
-  }
-  
   render() {
+    const { name, age, email } = this.state;
+    const { userLogin } = this.props;
+    if (!userLogin.email) return <div>Login não efetuado!</div>;
     return (
       <div>
-        <h1>Cadastro</h1>
-
-        <label htmlFor='nome'>
-          Nome
+        <div>
           <input
-          id='nome'
-          type='text'
-          onChange={ this.handleChange }
-          name='name'
+            type="text"
+            placeholder="Nome"
+            value={name}
+            onChange={e => this.setState({ name: e.target.value })}
           />
-        </label>
-
-        <label htmlFor='idade'>
-          Idade
           <input
-          id='idade'
-          type='number'
-          onChange={ this.handleChange }
-          name='age'
+            type="number"
+            placeholder="Idade"
+            value={age}
+            onChange={e => this.setState({ age: e.target.value })}
           />
-        </label>
-
-        <label htmlFor='email'>
-          Email
           <input
-          id='email'
-          type='email'
-          onChange={ this.handleChange }
-          name='email'
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={e => this.setState({ email: e.target.value })}
           />
-        </label>
-
-        <button 
-        type='button'
-        onClick={ this.handleClick }
-        >
-          Entrar
-          </button> 
-
+        </div>
+        <button onClick={this.validateRegister}>Registrar Cliente</button>
+        <Link to="/clientesCadastrados">Ver clientes cadastrados</Link>
       </div>
-    )
+    );
   }
 }
+const mapStateToProps = state => ({
+  userLogin: state.loginReducer});
+const mapDispatchToProps = dispatch => ({
+  addRegister: e => dispatch(addRegister(e))});
 
-export default Cadastro
+export default connect(mapStateToProps, mapDispatchToProps)(Cadastro);
