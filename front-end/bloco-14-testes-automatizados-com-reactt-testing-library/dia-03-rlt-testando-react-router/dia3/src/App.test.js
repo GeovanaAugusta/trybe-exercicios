@@ -5,7 +5,7 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 
-// 
+//  
 // Importamos o teste em si, que chama a helper passando o componente a ser renderizado.
 import renderWithRouter from './renderWithRouter';
 import App, { About } from './App';
