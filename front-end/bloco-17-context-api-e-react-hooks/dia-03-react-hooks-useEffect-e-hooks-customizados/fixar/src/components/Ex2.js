@@ -32,4 +32,4 @@ return (
 
 export default Ex2;
 
-// Agora é hora de sentir o poder dos Hooks customizados na pele! Faça uma Todo list simples usando um hook customizado useArray para manipular os dados guardados na lista.
+// Agora é hora de sentir o poder dos Hooks customizados na pele! Faça uma Todo list simples usando um hook customizado useArray para manipular os dados guardados na lista. 
