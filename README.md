@@ -99,7 +99,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 12-1: _Ciclo de vida de componentes_
 - [x] 12-2: _React Router_
-- [x] 12-3: _[Projeto - TrybeTunes]()_
+- [x] 12-3: _[Projeto - TrybeTunes](https://github.com/GeovanaAugusta/trybetunes-project)_
 
 ##### Bloco 13: Metodologias Ágeis
 
@@ -120,11 +120,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 15-3: _Usando o Redux no React - Prática_
 - [x] 15-4: _Usando o Redux no React - Actions Assíncronas_
 - [x] 15-5: _Testes em React-Redux_
-- [x] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-6: _[Projeto - Trybe Wallet](https://github.com/GeovanaAugusta/trybewallet-project)_
 
 ##### Bloco 16: Projeto React
 
-- [x] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia](https://github.com/GeovanaAugusta/trivia-game-project)_
 
 ##### Bloco 17: Context API & React Hooks
 
@@ -135,7 +135,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 18: Projeto Final de Front-end
 
-- [x] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas](https://github.com/GeovanaAugusta/my-personal-chef)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -144,7 +144,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 19-1: _Utilizando Containers - Docker_
 - [x] 19-2: _Manipulação e Criação de Imagens no Docker_
 - [x] 19-3: _Orquestrando Containers com Docker Compose_
-- [x] 19-4: _[Projeto - Docker Todo-List]()_
+- [x] 19-4: _[Projeto - Docker Todo-List](https://github.com/GeovanaAugusta/docker-todo-list-project)_
 
 ##### Bloco 20: Introdução a SQL
 
