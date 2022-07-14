@@ -26,7 +26,6 @@ SELECT name FROM Projects
 ORDER BY name DESC;
 
 -- Escreva uma query que exiba a string "O projeto name precisou de hours horas para ser concluído." para cada projeto.
-
 SELECT CONCAT('O projeto ', name, ' precisou de ', hours, ' horas para ser concluído.') AS resultado FROM Projects;
 
 -- Escreva uma query para exibir o nome e as horas dos três projetos com a maior quantidade de horas.
@@ -54,4 +53,5 @@ ORDER BY hours ASC
 LIMIT 5;
 
 -- Escreva uma query que exiba a string "Existem Number cientistas na tabela Scientists.", em que Number se refira a quantidade de cientistas.
-SELECT CONCAT('Existem', COUNT(name), 'cientistas na tabela Scientists.') AS total_cientistas FROM Scientists;
+SELECT * FROM Scientists;
+SELECT 'Existem', COUNT(name), 'cientistas na tabela Scientists.' AS total_cientistas FROM Scientists;
