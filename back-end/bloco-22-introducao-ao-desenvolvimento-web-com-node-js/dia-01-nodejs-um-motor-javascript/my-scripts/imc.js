@@ -58,11 +58,11 @@ const imcCalculation = (weight, height) => {
  }
 
  function main() {
-  const peso = readline.questionFloat('Qual o seu peso? (em kg)');
-  const altura = readline.questionFloat('Qual a sua altura? (em cm)');
-  const imc = imcCalculation(peso, altura);
+  const weight = readline.questionFloat('Qual o seu peso? (em kg)');
+  const height = readline.questionFloat('Qual a sua altura? (em cm)');
+  const imc = imcCalculation(weight, height);
 
-     console.log(`Seu imc é: ${imcCalculation(peso, altura)}`);
+     console.log(`Seu imc é: ${imcCalculation(weight, height)}`);
      const situacao = situationCalculation(imc);     
     }
   
