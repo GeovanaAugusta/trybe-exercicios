@@ -30,7 +30,7 @@ const imcCalculation = (weight, height) => {
   //     main();
 
  // 5 Vamos sofisticar um pouco mais nosso script. Além de imprimir o IMC na tela, imprima também em qual categoria da tabela abaixo aquele IMC se enquadra:
- function situationCalculation(imc) {
+ const situationCalculation = (imc) => {
   if (imc < 18.5) {
     console.log('Situação: Abaixo do peso (magreza)');
     return;
