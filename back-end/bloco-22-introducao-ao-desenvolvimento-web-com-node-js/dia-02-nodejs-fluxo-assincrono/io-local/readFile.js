@@ -1,3 +1,5 @@
+// O fs.readFile é assíncrono, menos performático que o fs.promise.readFile e + que o fs.readFileSync, usa callback
+
 // const fs = require('fs');
 
 // const nomeDoArquivo = 'meu-arquivo.txt';
@@ -16,6 +18,7 @@
 // });
 
 // Com promise
+//  O fs.promise.readFile é assíncrono, mais performático que os outros. Usa tanto async/await quanto then/catch
 
 const fs = require('fs').promises;
 
