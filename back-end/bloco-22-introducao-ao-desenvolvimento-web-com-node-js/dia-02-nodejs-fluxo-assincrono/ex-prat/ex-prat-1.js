@@ -56,18 +56,18 @@ function callDoMath() {
   return randomNumbers;
 }
 
-doMath(...callDoMath)
-  .then((result) => console.log(result))
-  .catch((err) => console.error(err.message));
+// doMath(...callDoMath)
+//   .then((result) => console.log(result))
+//   .catch((err) => console.error(err.message));
 
-//   doMath(10, 10, 10)
-//   .then((resolve) => console.log(resolve))
-//   .catch((error) => console.log(error.message));
+  doMath(10, 10, 10)
+  .then((resolve) => console.log(resolve))
+  .catch((error) => console.log(error.message));
 
-// doMath(1, 1, 'a')
-//   .then((resolve) => console.log(resolve))
-//   .catch((error) => console.log(error.message));
+doMath(1, 1, 'a')
+  .then((resolve) => console.log(resolve))
+  .catch((error) => console.log(error.message));
 
-// doMath(1, 1, 1)
-//   .then((resolve) => console.log(resolve))
-//   .catch((error) => console.log(error.message));
+doMath(1, 1, 1)
+  .then((resolve) => console.log(resolve))
+  .catch((error) => console.log(error.message));
