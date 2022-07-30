@@ -42,6 +42,7 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
 
+// No Express, uma rota é registrada utilizando a assinatura app.METODO(caminho, callback), onde a função de callback recebe três parâmetros: request, response e next.
 // request: geralmente chamado de req, contém as informações enviadas pelo cliente ao servidor;
 // response: geralmente chamado de res, permite o envio de informações do servidor de volta ao cliente;
 // next: função que diz para o Express que aquela callback terminou de ser executada, e que ele deve prosseguir para executar a próxima callback para aquela rota. Este parâmetro é opcional 
