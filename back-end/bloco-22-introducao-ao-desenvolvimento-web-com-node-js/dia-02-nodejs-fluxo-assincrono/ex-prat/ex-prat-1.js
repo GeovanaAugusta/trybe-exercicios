@@ -42,32 +42,19 @@ doMath(1, 1, 1)
 // Caso a Promise seja resolvida, escreva na tela o resultado do cálculo.
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * 100 + 1);
+  const randomNumber = Math.floor(Math.random() * 100 + 1) + 1;
+  return randomNumber;
 }
+// console.log(getRandomNumber())
 
-function callDoMath() {
-  /* Criamos um novo array de 3 posições
-   * e utilizamos o `map` para gerar um número aleatório
-   * para cada posição do Array
-   */
-  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
-  console.log(randomNumbers);
+const randomNumber = getRandomNumber();
+const randomNumber2 = getRandomNumber();
+const randomNumber3 = getRandomNumber();
+console.log(typeof randomNumber);
+// console.log(randomNumber, randomNumber2, randomNumber3);
 
-  return randomNumbers;
-}
+// Números aleatórios
+doMath(randomNumber, randomNumber2, randomNumber3)
+.then((resolve) => console.log('Aleatório', resolve))
+  .catch((error) => console.error('Aleatório', error.message));
 
-// doMath(...callDoMath)
-//   .then((result) => console.log(result))
-//   .catch((err) => console.error(err.message));
-
-  doMath(10, 10, 10)
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message));
-
-doMath(1, 1, 'a')
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message));
-
-doMath(1, 1, 1)
-  .then((resolve) => console.log(resolve))
-  .catch((error) => console.log(error.message));
