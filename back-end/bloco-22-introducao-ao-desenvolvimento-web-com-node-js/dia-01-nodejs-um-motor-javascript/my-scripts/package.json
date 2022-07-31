@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "imc": "node imc.js",
     "_comentario": "2 Agora, permita que o script seja executado através do comando npm run imc.",
-    "velocity": "node velocidade.js"
+    "velocidade": "node velocidade.js"
   },
   "author": "Geovana",
   "license": "ISC",
