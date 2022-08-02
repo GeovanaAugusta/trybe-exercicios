@@ -24,12 +24,14 @@ app.post('/hello', (req, res) => {
 // Caso a pessoa usuária tenha idade superior a 17 anos, devolva o JSON { "message": "Hello, <nome do usuário>!" } com o status code 200 - OK.
 // Caso a pessoa usuária tenha 17 anos ou menos, devolva o JSON { "message": "Unauthorized" } com o status code 401 - Unauthorized.
 app.post('/greetings', (req, res) => {
-  const { name, age } = req.body;
-  if (Number(age) > 17) {
+  const { name, age } = req.query;
+  if (age > 17) {
   return res.status(200).json({ message: `Hello, ${name}!` });
   }
   return res.status(401).json({ message: 'Unauthorized' });
 });
+
+// Só com query foi http://localhost:3000/greetings?age=18&name=Geovana
 
 // 4 Crie uma rota PUT /users/:name/:age. 🚀
 // Sua rota deve retornar o seguinte JSON: { "message": "Seu nome é <name> e você tem <age> anos de idade" }.
