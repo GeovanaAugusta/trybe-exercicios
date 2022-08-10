@@ -49,7 +49,7 @@ const getByAuthorId = async (authorId) => {
   }));
 };
 
-// Outra solução 
+// Outra solução do vamos praticar 
 const getById = async (id) => {
   const query = 'SELECT * FROM model_example.books WHERE id=?;';
 
@@ -64,7 +64,8 @@ const getById = async (id) => {
   }))[0];
 }
 
-// Criando um novo livro
+// Vamos praticar #3
+// 1- Validações para criar um novo livro
 
 const isValid = async (title, authorId) => {
 	if (!title || title.length < 2) return false;

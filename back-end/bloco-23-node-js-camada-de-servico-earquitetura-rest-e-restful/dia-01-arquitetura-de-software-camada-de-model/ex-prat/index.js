@@ -32,7 +32,7 @@ const validateId = (user) => {
   return value;
 };
 
-// Lugar do body-parser
+// Lugar do body-parser - express já o possui embutido
 app.use(express.json());
 
 // Exercício 1
@@ -44,8 +44,9 @@ app.post('/user', async (req, res) => {
 });
 
 // Exercício 2
-app.get('/user', async (req, res) => {
+app.get('/user', async (_req, res) => {
   const users = await User.findAll();
+  if (users.length === 0) return res.status(200).json([]);
   res.status(200).json(users);
 })
 
@@ -53,6 +54,7 @@ app.get('/user', async (req, res) => {
 app.get('/user/:id', async (req, res) => {
   const { id } = validateId(req.params);
   const user = await User.findById(id);
+  if (!user) return res.status(404).json({ message: 'User not Found' });
   res.status(200).json(user);
 })
 
@@ -60,8 +62,9 @@ app.get('/user/:id', async (req, res) => {
 app.put('/user/:id', async (req, res) => {
   const { id } = validateId(req.params);
   const user = validateBody(req.body);
-  await User.checkIfExists(id);
+  const checkId = await User.checkIfExists(id);
   await User.update(id, user);
+  if (!checkId) return res.status(404).json({ message: 'User not Found' });
   res.status(200).json(user);
 })
 

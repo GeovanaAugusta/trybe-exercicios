@@ -74,7 +74,7 @@ app.get('/books/:id', async (req, res) => {
 });
 
 // Vamos praticar #3
-// Criando um novo livro
+// Criando um novo livro caso passe nas validações
 app.post('/books', async (req, res) => {
 	const { title, author_id } = req.body;
 

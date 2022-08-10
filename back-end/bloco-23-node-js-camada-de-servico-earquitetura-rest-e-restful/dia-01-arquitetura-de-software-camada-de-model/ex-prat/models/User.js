@@ -1,10 +1,11 @@
 const db = require('./connection');
 
+// Exercício 4
 const User = {
   checkIfExists: async (id) => {
     const sql = 'SELECT * FROM users WHERE id = ?';
     const [[user]] = await db.query(sql, [id]);
-    if (!user) throw new Error('User not Found');
+    return user;
   },
 
   // Exercício 1 - inserir dados do array
