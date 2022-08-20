@@ -22,7 +22,7 @@ app.use(errorMiddleware);
 app.post('/cep', CepController.createCep);
 
 // A aplicação deve escutar na porta 3000;
-const PORT = process.env.PORT || 3000;;
+const PORT = process.env.API_PORT || 3000;;
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
