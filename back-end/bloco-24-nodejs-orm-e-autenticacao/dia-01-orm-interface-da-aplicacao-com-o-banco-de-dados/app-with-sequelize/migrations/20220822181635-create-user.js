@@ -1,0 +1,37 @@
+'use strict';
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.createTable('Users', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      fullName: {
+        type: Sequelize.STRING
+      },
+      // adicionamos um novo campo 'email' como foi feito no model !
+      email: {
+        type: Sequelize.STRING
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
+    });
+  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable('Users');
+  }
+};
+
+//  Com a migration criada, basta executarmos o seguinte comando pelo CLI:
+// npx sequelize db:migrate
+
+// Caso queira reverter uma migration use o seguinte comando:
+// npx sequelize db:migrate:undo

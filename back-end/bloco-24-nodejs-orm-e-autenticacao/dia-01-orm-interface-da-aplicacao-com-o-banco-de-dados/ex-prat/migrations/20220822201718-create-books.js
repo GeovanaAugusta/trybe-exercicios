@@ -6,6 +6,9 @@
 // createdAt: deve ser do tipo date e não pode ser nulo;
 // updatedAt: deve ser do tipo date e não pode ser nulo;
 // Obs: o método down da migration deve ser capaz de remover a tabela.
+
+// npx sequelize migration:generate --name create-books
+
 // Obs 2: Execute o comando npx sequelize db:migrate e verifique se a tabela foi criada antes de continuar para os próximos exercícios.
 
 'use strict';
