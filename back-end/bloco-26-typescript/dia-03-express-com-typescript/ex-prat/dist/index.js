@@ -1,34 +1,21 @@
 "use strict";
-// // ./index.ts
+// ./index.ts
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// import express from 'express';
-// import { StatusCodes } from 'http-status-codes';
-// const app = express();
-// app.use(express.json());
-// const PORT = 8000;
-// app.get('/', (req, res) => {
-//   res.status(StatusCodes.OK).send('Express + TypeScript')
-// });
-// app.listen(PORT, () => {
-//   console.log(`Server is running at http://localhost:${PORT}`);
-// });
-// ./index.ts
-// import express, { Request, Response } from 'express';
 const express_1 = __importDefault(require("express"));
 const http_status_codes_1 = require("http-status-codes");
 require("express-async-errors");
-const books_routes_1 = __importDefault(require("./routes/books.routes"));
+const users_routes_1 = __importDefault(require("./routes/users.routes"));
 // const app = express();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-const PORT = 8000;
+const PORT = 3000;
 app.get('/', (req, res) => {
     res.status(http_status_codes_1.StatusCodes.OK).send('Express + TypeScript');
 });
-app.use(books_routes_1.default); // coloque essa linha antes do middleware de erro!
+app.use(users_routes_1.default); // Sempre antes do middleware de erro
 app.use((err, req, res, next) => {
     const { name, message, details } = err;
     console.log(`name: ${name}`);

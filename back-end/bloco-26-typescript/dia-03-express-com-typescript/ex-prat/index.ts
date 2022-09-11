@@ -1,42 +1,22 @@
-// // ./index.ts
-
-// import express from 'express';
-// import { StatusCodes } from 'http-status-codes';
-
-// const app = express();
-
-// app.use(express.json());
-
-// const PORT = 8000;
-
-// app.get('/', (req, res) => {
-//   res.status(StatusCodes.OK).send('Express + TypeScript')
-// });
-
-// app.listen(PORT, () => {
-//   console.log(`Server is running at http://localhost:${PORT}`);
-// });
-
 // ./index.ts
 
-// import express, { Request, Response } from 'express';
 import express, { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import 'express-async-errors';
-import BooksRoutes from './routes/books.routes';
+import UserRoutes from './routes/users.routes';
 
 // const app = express();
 const app: express.Application = express();
 
 app.use(express.json());
 
-const PORT = 8000;
+const PORT = 3000;
 
-app.get('/', (req: Request, res: Response) => {
-    res.status(StatusCodes.OK).send('Express + TypeScript')
+app.get('/', (req, res) => {
+  res.status(StatusCodes.OK).send('Express + TypeScript')
 });
 
-app.use(BooksRoutes); // coloque essa linha antes do middleware de erro!
+app.use(UserRoutes); // Sempre antes do middleware de erro
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   const { name, message, details } = err as any;
@@ -61,5 +41,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
