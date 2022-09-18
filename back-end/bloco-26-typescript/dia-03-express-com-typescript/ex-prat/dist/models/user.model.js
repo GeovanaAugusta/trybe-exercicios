@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-class BookModel {
+class UserModel {
     constructor(connection) {
         this.connection = connection;
     }
@@ -51,7 +51,7 @@ class BookModel {
         });
     }
 }
-exports.default = BookModel;
+exports.default = UserModel;
 // Atividade 1 🚀
 // Objetivos:
 // Criar um CRUD completo de pessoas usuárias de uma aplicação.

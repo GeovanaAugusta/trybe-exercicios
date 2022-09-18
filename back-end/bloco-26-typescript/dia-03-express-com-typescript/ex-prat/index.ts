@@ -4,6 +4,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import 'express-async-errors';
 import UserRoutes from './routes/users.routes';
+import PostRoutes from './routes/posts.routes';
 
 // const app = express();
 const app: express.Application = express();
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(UserRoutes); // Sempre antes do middleware de erro
+app.use(PostRoutes);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   const { name, message, details } = err as any;

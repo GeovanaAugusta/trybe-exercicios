@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const http_status_codes_1 = require("http-status-codes");
 require("express-async-errors");
 const users_routes_1 = __importDefault(require("./routes/users.routes"));
+const posts_routes_1 = __importDefault(require("./routes/posts.routes"));
 // const app = express();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
     res.status(http_status_codes_1.StatusCodes.OK).send('Express + TypeScript');
 });
 app.use(users_routes_1.default); // Sempre antes do middleware de erro
+app.use(posts_routes_1.default);
 app.use((err, req, res, next) => {
     const { name, message, details } = err;
     console.log(`name: ${name}`);
