@@ -34,6 +34,7 @@ export default class Person {
     this.validateBirthDate(value);
     this._birthDate = value;
   }
+  
 
   private validateName(value: string): void {
     if (value.length < 3) throw new Error('O nome deve conter no mínimo 3 caracteres.');
